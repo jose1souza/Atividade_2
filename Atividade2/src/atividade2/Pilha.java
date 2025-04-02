@@ -63,7 +63,7 @@ public class Pilha <T> {
         return retorno;*/
     } // fim do pop
     
-    public T pick(){
+    public T peek(){
         // olhar o valor do topo
         return this.elementos[this.topo];
     }

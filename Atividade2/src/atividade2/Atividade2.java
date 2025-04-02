@@ -42,13 +42,17 @@ public class Atividade2 {
                 case 1:
                         Recorde novoRecorde = new Recorde();
                         lerRecorde(novoRecorde);
-                        if(novoRecorde.tempo < minhaPilha.tempo){
-                            minhaPilha.push(novoRecorde);
+                        if(!minhaPilha.isEmpty()){
+                        if(novoRecorde.getTempo() < 
+                                minhaPilha.peek().getTempo()){
+                            minhaPilha.push(novoRecorde); // verificando se o tempo for menor que o anterior
+                            // e inserindo se não estiver vazia
+                            }
                         }
                     break;
                 case 2:
                     if(!(minhaPilha.isEmpty())){
-                       System.out.println("Valor do Topo: " + minhaPilha.pick());
+                       System.out.println("Valor do Topo: " + minhaPilha.peek());
                     }
                     else{
                         System.out.println("Pilha vazia!");
