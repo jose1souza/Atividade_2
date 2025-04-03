@@ -42,12 +42,13 @@ public class Atividade2 {
                 case 1:
                         Recorde novoRecorde = new Recorde();
                         lerRecorde(novoRecorde);
-                        if(!minhaPilha.isEmpty()){
-                        if(novoRecorde.getTempo() < 
-                                minhaPilha.peek().getTempo()){
+                        if(minhaPilha.isEmpty() || novoRecorde.getTempo() < 
+                            minhaPilha.peek().getTempo()){
                             minhaPilha.push(novoRecorde); // verificando se o tempo for menor que o anterior
                             // e inserindo se não estiver vazia
                             }
+                        else{
+                            System.out.println("Seu recorde não pôde ser inserido pois existe um recorde com tempo menor!");
                         }
                     break;
                 case 2:

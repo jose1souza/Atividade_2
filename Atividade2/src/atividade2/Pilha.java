@@ -43,7 +43,9 @@
         } // fim do isFull
 
         public boolean push(T dado) {
-        if (!this.isFull()) { 
+        if (this.isFull()) { 
+          aumentaCapacidade();
+            }
             // Verifica se a pilha não está cheia antes de adicionar o elemento
             // Em uma única linha:
             this.elementos[++this.topo] = dado; 
@@ -53,11 +55,6 @@
             this.elementos[this.topo] = dado; // Adiciona o elemento no novo topo
             */
             return true; // Retorna true indicando que a operação foi bem-sucedida
-        }
-        else{
-            aumentaCapacidade();
-        return false; // Retorna false se a pilha estiver cheia e não puder adicionar o elemento
-        }
     } // fim do push
 
         // função genérica do tipo T que retorna o valor que está no topo
